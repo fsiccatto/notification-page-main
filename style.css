@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+  --pRed-color: #f65351;
+  --pBlue-color: #0a317b;
+  --white: #fff;
+  --vl-grayish-blue: #f7fafd;
+  --l-grayish-blue1: #e5effa;
+  --l-grayish-blue2: #dde7ee;
+  --grayish-blue: #939dae;
+  --d-grayish-blue: #5e6778;
+  --vd-grayish-blue: #1c202b;
+  --font-ppal: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--font-ppal);
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: var(--ppal-color);
+  background-color: var(--vl-grayish-blue);
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h6 {
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.card-notification {
+  max-width: 710px;
+  margin: 4rem;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: var(--white);
+}
+
+.notifications {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.notifications h2 {
+  font-weight: 800;
+}
+
+.notifications h2 span {
+  display: inline-block;
+  padding: .2rem 1rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-left: 10px;
+  color: var(--white);
+  background-color: var(--pBlue-color);
+}
+
+.notifications button {
+  color: var(--grayish-blue);
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+section .card {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+section .card.active {
+  padding: 1rem ;
+  margin-bottom: .5rem;
+  cursor: pointer;
+  background-color: var(--vl-grayish-blue);
+}
+
+section .card img {
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+}
+
+section .card-content{
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-top: .2rem;
+}
+
+section .card-content h4 {
+  margin: 0;
+  font-weight: 500;
+  position: relative;
+  color: var(--vd-grayish-blue);
+}
+
+section .card .no-read.active {
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  right: -2px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--pRed-color);
+}
+
+section .card .no-read {
+  display: none;
+}
+
+section .card-content h4 .name,
+section .card-content h4 .group {
+  color: var(--pBlue-color);
+  font-weight: 800;
+}
+section .card-content h4 .text-bold {
+  font-weight: 800;
+}
+
+section .card-content .private-message {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--l-grayish-blue2);
+}
+
+section .card-content h6 {
+  margin-top: .2rem;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--grayish-blue);
+}
+
+section .your-picture {
+  margin-left: auto;
+}
+
+/* Media-query */
+
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 15px;
+  }
+
+  .card-notification {
+    padding: 1rem;
+  }
+
+  section .card {
+    margin-bottom: .5rem;
+  }
+
+  section .your-picture {
+    margin-left: 10px;
+  }
+}
